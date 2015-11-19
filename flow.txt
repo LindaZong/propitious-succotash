@@ -1,0 +1,7 @@
+创建本地仓库
+	git init % 在目标文件夹内
+	git add *** %开始跟踪一个新文件， 文件修改后也用此命令暂存
+	git commit % 提交更新
+远程仓库
+	git pull
+	git push
