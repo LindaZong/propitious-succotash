@@ -5,3 +5,59 @@
 远程仓库
 	git pull
 	git push
+
+1. 取得项目的git仓库
+
+ ①在本地现存的目录下，通过导入所有的文件来创建新的git仓库
+
+       $git init
+
+       $git add 文件
+
+       $git commit -m 'message'
+
+ ②从已有的git仓库中克隆出一个新的镜像仓库
+
+       $git clone git://github.com/schacon/grit.git
+
+
+
+ 命令：
+
+   git status 查看文件状态
+
+   git add 跟踪新文件，暂存已修改的文件
+
+   git commit 提交更新
+
+   git log 查看提交历史
+
+   git rm --cached readme.txt 将readme.txt从暂存清单中删除，但是保留在工作目录中
+
+   git rm readme.txt 记录删除操作，工作目录中删除，并且该文件不再纳入版本控制
+
+   rm readme.txt 删除工作目录中的文件
+
+   git mv file_from file_to文件重命名
+
+       $ git mv README.txt README
+
+       相当于执行  
+
+       $ mv README.txt README
+
+       $ git rm README.txt
+
+       $ git add README
+
+   git reset HEAD <file> 取消已暂存的文件
+
+   git commit --amend 修改最后一次提交        
+
+       下面的三条命令最终只是产生一个提交，第二个提交命令修正了第一个的提交内容。
+
+       $ git commit -m 'initial commit'
+
+       $ git add forgotten_file
+
+       $ git commit --amend
